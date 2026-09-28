@@ -170,7 +170,7 @@ Full API documentation: [docs/API_SPEC.md](docs/API_SPEC.md)
 |----------|-------------|---------|
 | `SARVAM_API_KEY` | Sarvam AI API key | `sk_xxx...` |
 | `SARVAM_API_BASE` | Sarvam API base URL | `https://api.sarvam.ai/v1` |
-| `DIALOG_360_API_KEY` | 360dialog WhatsApp API key | `Z47M...` |
+| `DIALOG_360_API_KEY` | 360dialog WhatsApp API key | `your_360dialog_api_key_here` |
 | `DIALOG_360_BASE_URL` | 360dialog base URL | `https://waba-sandbox.360dialog.io` |
 | `SUPABASE_URL` | Supabase project URL | `https://xxx.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | `eyJhbGci...` |
