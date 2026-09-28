@@ -1,8 +1,10 @@
 # Sarvam Telecom Bot — Deployment Notes
 
-Live URL: https://sarvam-telecom-bot-live-production.up.railway.app
-Live GitHub repo: https://github.com/nrvm94/sarvam-telecom-bot-live
-Local project: `sarvam-telecom-bot` (never modified — all changes go to live repo only)
+> **Status (2026-09-28):** The Railway deployment is offline (free trial ended). This repo is now the single source of truth — the barge-in and off-topic redirect fixes were ported in from the original `sarvam-telecom-bot` repo, which is archived. The notes below are kept as a record of the deployment.
+
+Former live URL: https://sarvam-telecom-bot-live-production.up.railway.app (offline)
+GitHub repo: https://github.com/nrvm94/Telecom-Service-AI-Voice-Agent
+Original project: https://github.com/nrvm94/sarvam-telecom-bot (archived)
 
 ---
 

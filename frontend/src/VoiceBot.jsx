@@ -204,12 +204,23 @@ export default function VoiceBot() {
     let msg
     try { msg = JSON.parse(event.data) } catch { return }
 
-    if (msg.type === 'transcript') {
+    if (msg.type === 'speech_start') {
+      if (isBotSpeakingRef.current) {
+        audioQueueRef.current.stop()
+        audioQueueRef.current = new AudioQueue()
+        isBotSpeakingRef.current = false
+        setBotStatus('active')
+        setStatusMsg('Listening...')
+      }
+    }
+
+    else if (msg.type === 'transcript') {
       setTranscription(msg.text)
       setBotStatus('processing')
       setStatusMsg('Bot is thinking...')
       pendingTurnRef.current = { transcript: msg.text, timestamp: nowISO() }
     }
+
 
     else if (msg.type === 'response') {
       setBotResponse(msg.text)
@@ -254,13 +265,16 @@ export default function VoiceBot() {
           { role: 'bot', text: responseText, timestamp: ts },
         ])
 
-        // Wait for audio queue to drain, then switch back to listening
+        // Wait for audio queue to drain, then add 300ms cooldown before
+        // resuming capture — prevents bot's echo being picked up on Mac
         const checkDone = setInterval(() => {
           if (!audioQueueRef.current.playing) {
             clearInterval(checkDone)
-            isBotSpeakingRef.current = false
-            setBotStatus('active')
-            setStatusMsg('Listening...')
+            setTimeout(() => {
+              isBotSpeakingRef.current = false
+              setBotStatus('active')
+              setStatusMsg('Listening...')
+            }, 300)
           }
         }, 200)
       }

@@ -1,7 +1,7 @@
 # Sarvam Telecom Voice Bot
 ### AI-Powered Customer Support for Airtel — Built on Sarvam AI
 
-> **Live Demo:** Coming Soon | **GitHub:** https://github.com/nrvm94/sarvam-telecom-bot
+> **GitHub:** https://github.com/nrvm94/Telecom-Service-AI-Voice-Agent
 
 ---
 
@@ -58,8 +58,8 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full system diagram.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/nrvm94/sarvam-telecom-bot.git
-cd sarvam-telecom-bot
+git clone https://github.com/nrvm94/Telecom-Service-AI-Voice-Agent.git
+cd Telecom-Service-AI-Voice-Agent
 ```
 
 ### 2. Configure environment
@@ -226,7 +226,7 @@ Key numbers:
 ## Project Structure
 
 ```
-sarvam-telecom-bot/
+Telecom-Service-AI-Voice-Agent/
 ├── .env                          # Credentials (gitignored)
 ├── .env.example                  # Template for credentials
 ├── docker-compose.yml            # n8n service
@@ -257,17 +257,6 @@ sarvam-telecom-bot/
     ├── ARCHITECTURE.md           # System architecture
     └── API_SPEC.md               # API documentation
 ```
-
----
-
-## Demo Video
-
-**[Watch the demo →](_DEMO_LINK_HERE_)**
-
-3–5 minute walkthrough showing:
-- Hindi voice query → RAG retrieval → spoken response
-- English voice query → spoken response
-- Escalation flow → WhatsApp notification via n8n
 
 ---
 
