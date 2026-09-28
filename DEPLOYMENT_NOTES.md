@@ -285,7 +285,7 @@ With 3 sequential calls: easily 1-2 seconds extra vs local.
 
 3. **HTTP Request — Send WhatsApp** (Dialog360)
    - URL: `https://waba-sandbox.360dialog.io/v1/messages`
-   - Header: `D360-API-KEY: Z47MFTHQK4QUB1O7GFMD2UOP6TPYL643`
+   - Header: `D360-API-KEY: <your-360dialog-api-key>`
    - Body Content Type: JSON (NOT JSON.stringify — n8n serialises automatically)
    ```json
    {
