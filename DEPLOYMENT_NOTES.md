@@ -80,7 +80,7 @@ Reason: `chroma-hnswlib==0.7.3` (chromadb 0.4.18 dep) has no Python 3.13 binary 
 | `N8N_WEBHOOK_URL` | `https://nrvmhdn.app.n8n.cloud/webhook/escalation` | n8n cloud production webhook |
 | `ENVIRONMENT` | `production` | |
 | `LOG_LEVEL` | `DEBUG` | |
-| `DIALOG_360_API_KEY` | `Z47MFTHQK4...` | Used by n8n, not by the app directly |
+| `DIALOG_360_API_KEY` | `<your-360dialog-api-key>` | Used by n8n, not by the app directly |
 | `DIALOG_360_BASE_URL` | `https://waba-sandbox.360dialog.io` | Used by n8n only |
 
 **Critical note on SARVAM_API_BASE:** The Sarvam dashboard shows `https://api.sarvam.ai/v1` for the LLM endpoint. Do NOT use this as the base URL. The code in `sarvam_client.py` builds paths like:
